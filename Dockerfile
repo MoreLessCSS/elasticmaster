@@ -44,10 +44,9 @@ RUN chown -R elasticsearch:elasticsearch /opt/
 ADD ./src/ /run/
 RUN chmod +x -R /run/
 
-USER elasticsearch
 EXPOSE 9200:9200
 
-EXPOSE 9200:9200
+USER elasticsearch
 
 ENTRYPOINT ["/run/entrypoint.sh"]
 
