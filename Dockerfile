@@ -17,6 +17,7 @@ CLUSTER_NAME="meCustomer" \
     GOSU_VERSION=1.9 \
     JAVA_HOME="/usr/java/jre1.8.0_131/" \
     HEAP_SIZE="1g"
+    ES_JAVA_OPTS="-Des.network.host=$NETWORK_HOST  -Des.logger.level=INFO -Xms$HEAP_SIZE -Xmx$HEAP_SIZE"
 
 ### install gosu 1.9 for easy step-down from root
 RUN set -x \
@@ -48,6 +49,6 @@ EXPOSE 9200:9200
 
 USER elasticsearch
 
-ENTRYPOINT ["/run/entrypoint.sh"]
+#ENTRYPOINT ["/run/entrypoint.sh"]
 
 CMD ["/opt/elasticsearch/bin/elasticsearch"]
