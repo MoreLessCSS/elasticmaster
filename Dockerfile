@@ -16,7 +16,7 @@ CLUSTER_NAME="meCustomer" \
     ELASTIC_PWD="getme" \
     GOSU_VERSION=1.9 \
     JAVA_HOME="/usr/java/jre1.8.0_131/" \
-    HEAP_SIZE="1g"
+    HEAP_SIZE="1g",
     ES_JAVA_OPTS="-Des.network.host=$NETWORK_HOST  -Des.logger.level=INFO -Xms$HEAP_SIZE -Xmx$HEAP_SIZE"
 
 ### install gosu 1.9 for easy step-down from root
