@@ -48,6 +48,6 @@ EXPOSE 9200:9200
 
 USER elasticsearch
 
-#ENTRYPOINT ["/run/entrypoint.sh"]
+ENTRYPOINT ["/run/entrypoint.sh"]
 
 CMD ["/opt/elasticsearch/bin/elasticsearch"]
