@@ -46,6 +46,7 @@ RUN chown -R elasticsearch:elasticsearch /opt/
 ADD ./src/ /run/
 RUN chmod +x -R /run/
 
+RUN sysctl -w fs.file-max=65536
 
 EXPOSE 9200:9200
 EXPOSE 9300:9300
