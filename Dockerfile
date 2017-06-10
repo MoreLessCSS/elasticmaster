@@ -17,11 +17,9 @@ CLUSTER_NAME="meCustomer" \
     GOSU_VERSION=1.9 \
     JAVA_HOME="/usr/java/jre1.8.0_131/" \
     HEAP_SIZE="2g" \
-    JVM_OPTS="-Xmx2g -Xms2g -XX:MaxPermSize=1024m" \
-    ES_JAVA_OPTS="-Xmx2g -Xms2g" \
+    JVM_OPTS="-Xmx4g -Xms4g -XX:MaxPermSize=4096m" \
+    ES_JAVA_OPTS="-Xmx2g -Xms2g"
 
-
-RUN ulimit -n 65536 \
 
 ### install gosu 1.9 for easy step-down from root
 RUN set -x \
