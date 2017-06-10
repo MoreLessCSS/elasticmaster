@@ -17,7 +17,7 @@ CLUSTER_NAME="meCustomer" \
     GOSU_VERSION=1.9 \
     JAVA_HOME="/usr/java/jre1.8.0_131/" \
     HEAP_SIZE="2g" \
-    JVM_OPTS="-Xmx4g -Xms4g -XX:MaxPermSize=4096m" \
+    JVM_OPTS="-Xmx4g -Xms4g -XX:MaxPermSize=65536m" \
     ES_JAVA_OPTS="-Xmx2g -Xms2g"
 
 
