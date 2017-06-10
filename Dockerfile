@@ -46,7 +46,9 @@ RUN chown -R elasticsearch:elasticsearch /opt/
 ADD ./src/ /run/
 RUN chmod +x -R /run/
 
+
 EXPOSE 9200:9200
+EXPOSE 9300:9300
 
 USER elasticsearch
 
