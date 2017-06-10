@@ -21,7 +21,7 @@ CLUSTER_NAME="meCustomer" \
     ES_JAVA_OPTS="-Xmx2g -Xms2g" \
 
 
-RUN "ulimit -n 65536"
+RUN ulimit -n 65536 \
 
 ### install gosu 1.9 for easy step-down from root
 RUN set -x \
