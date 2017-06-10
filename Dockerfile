@@ -5,7 +5,8 @@ MAINTAINER me <me@me.com>
 LABEL Description="elasticsearch 5.4"
 
 ENV ES_VERSION=5.4.0 \
-    CLUSTER_NAME="meCustomer" \
+CLUSTER_NAME="me" \
+CLUSTER_NAME="meCustomer" \
     NODE_NAME="elkmaster1" \
     HTTP_PORT_ES=9200 \
     NETWORK_HOST=0.0.0.0 \
@@ -44,6 +45,7 @@ ADD ./src/ /run/
 RUN chmod +x -R /run/
 
 USER elasticsearch
+EXPOSE 9200:9200
 
 EXPOSE 9200:9200
 
