@@ -42,7 +42,7 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearc
     && ln -s elasticsearch-${ES_VERSION} elasticsearch
 
 COPY /config/*.* /opt/elasticsearch/config/
-RUN /bin/elasticsearch/elasticsearch-plugin install -s discovery-ec2 &1>2
+RUN /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2 &1>2
 
 RUN chown -R elasticsearch:elasticsearch /opt/
 
