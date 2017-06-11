@@ -33,14 +33,16 @@ RUN useradd -ms /bin/bash elasticsearch \
         && yum install -y net-tools wget which openssl
 
 RUN cd /opt
+RUN mkdir logs
+RUN mkdir lib
 
 RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz \
     && tar -xzf elasticsearch-${ES_VERSION}.tar.gz \
     && rm elasticsearch-${ES_VERSION}.tar.gz \
     && ln -s elasticsearch-${ES_VERSION} elasticsearch
 
-
 COPY /config/*.* /opt/elasticsearch/config/
+RUN /bin/elasticsearch/elasticsearch-plugin install -s discovery-ec2 &1>2
 
 RUN chown -R elasticsearch:elasticsearch /opt/
 
