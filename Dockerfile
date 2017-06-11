@@ -43,8 +43,8 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearc
 
 
 
-RUN /opt/elasticsearch/bin/elasticsearch-plugin install -s repository-s3 &1>2
-RUN /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2 &1>2
+RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s repository-s3
+RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2
 
 COPY /config/*.* /opt/elasticsearch/config/
 

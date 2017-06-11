@@ -28,6 +28,10 @@ node.name: ip-172-xx-xx-61
 path.conf: "/opt/elasticsearch"
 path.data: "/opt/lib/elasticsearch"
 path.logs: "/opt/logs/elasticsearch"
+
+cloud.aws.access_key: AKIAIH4356RTZ6WB5LCA
+cloud.aws.secret_key: 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
+
 cloud.aws.protocol: https
 cloud.aws.region: eu-central-1
 cloud.node.auto_attributes: true
