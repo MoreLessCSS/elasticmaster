@@ -41,8 +41,12 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearc
     && rm elasticsearch-${ES_VERSION}.tar.gz \
     && ln -s elasticsearch-${ES_VERSION} elasticsearch
 
-COPY /config/*.* /opt/elasticsearch/config/
+
+
+RUN /opt/elasticsearch/bin/elasticsearch-plugin install -s repository-s3 &1>2
 RUN /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2 &1>2
+
+COPY /config/*.* /opt/elasticsearch/config/
 
 RUN chown -R elasticsearch:elasticsearch /opt/
 
