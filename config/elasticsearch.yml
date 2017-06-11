@@ -25,7 +25,7 @@
 #xpack.watcher.enabled: false
 cluster.name: elasticsearch
 node.name: ip-172-xx-xx-61
-path.conf: "/opt/elasticsearch/bin/elasticsearch"
+path.conf: "/opt/elasticsearch"
 path.data: "/opt/lib/elasticsearch"
 path.logs: "/opt/logs/elasticsearch"
 cloud.aws.protocol: https
