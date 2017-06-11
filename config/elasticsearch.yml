@@ -49,7 +49,7 @@ transport.tcp.port: 9300
 network.host:
 - _eth0:ipv4_
 - _local_
-network.bind_host: _ec2:privateIp_
+network.bind_host: _eth0:ipv4_
 network.publish_host: _ec2:privateIp_
 node.master: true
 node.data: true
