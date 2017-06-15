@@ -29,8 +29,6 @@ path.conf: "/opt/elasticsearch"
 path.data: "/opt/lib/elasticsearch"
 path.logs: "/opt/logs/elasticsearch"
 
-cloud.aws.access_key: AKIAIGTKHE45UON7R7XA
-cloud.aws.secret_key: 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
 
 cloud.aws.protocol: https
 cloud.aws.region: eu-central-1
