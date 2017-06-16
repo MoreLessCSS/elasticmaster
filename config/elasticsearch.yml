@@ -51,4 +51,4 @@ network.bind_host: _eth0:ipv4_
 network.publish_host: 255.255.255.255
 node.master: true
 node.data: true
-plugin.mandatory: cloud-aws
+
