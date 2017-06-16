@@ -42,6 +42,7 @@ discovery.zen.ping.multicast.enabled: false
 discovery.zen.hosts_provider: ec2
 discovery.zen.join_timeout: 90s
 discovery.zen.minimum_master_nodes: 3
+discovery.zen.ping_timeout: 30s
 http.port: 9200
 transport.tcp.port: 9300
 network.host:
@@ -51,4 +52,4 @@ network.bind_host: _eth0:ipv4_
 network.publish_host: 255.255.255.255
 node.master: true
 node.data: true
-
+plugin.mandatory: cloud-aws
