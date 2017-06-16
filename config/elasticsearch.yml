@@ -28,7 +28,6 @@ node.name: ip-172-xx-xx-61
 path.conf: "/opt/elasticsearch"
 path.data: "/opt/lib/elasticsearch"
 path.logs: "/opt/logs/elasticsearch"
-action.disable_delete_all_indices: true
 
 cloud.aws.protocol: https
 cloud.aws.region: eu-central-1
