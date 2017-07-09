@@ -37,7 +37,7 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearc
     && rm elasticsearch-${ES_VERSION}.tar.gz \
     && ln -s elasticsearch-${ES_VERSION} elasticsearch
 
-COPY /config/*.* /opt/elasticmaster/config/
+COPY /config/*.* /opt/elasticsearch/config/
 
 RUN cd /opt/elasticsearch/
 
