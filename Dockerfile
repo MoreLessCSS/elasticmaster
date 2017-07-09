@@ -30,16 +30,16 @@ RUN set -x \
 WORKDIR /opt
 
 RUN useradd -ms /bin/bash elasticsearch \
-        && yum install -y net-tools wget which openssl
-
-RUN cd /opt
-RUN mkdir logs
-RUN mkdir lib
+        && yum install -y net-tools wget openssl
 
 RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz \
     && tar -xzf elasticsearch-${ES_VERSION}.tar.gz \
     && rm elasticsearch-${ES_VERSION}.tar.gz \
     && ln -s elasticsearch-${ES_VERSION} elasticsearch
+
+RUN cd /opt/elasticsearch/
+RUN mkdir data
+RUN mkdir logs
 
 RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s repository-s3
 RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2
