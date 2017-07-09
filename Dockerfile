@@ -44,8 +44,6 @@ RUN mkdir logs
 RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s repository-s3
 RUN echo y | /opt/elasticsearch/bin/elasticsearch-plugin install -s discovery-ec2
 
-COPY /config/*.* /opt/elasticsearch/config/
-
 RUN LOCAL_IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4) \
     && sed -i  "s/\\(^node\.name:\\).*/\\1 $LOCAL_IP/" ./elasticsearch/config/elasticsearch.yml
 
