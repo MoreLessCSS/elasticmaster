@@ -30,7 +30,7 @@ RUN set -x \
 WORKDIR /opt
 
 RUN useradd -ms /bin/bash elasticsearch \
-        && yum install -y net-tools wget openssl
+        && yum install -y net-tools wget which openssl
 
 RUN curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz \
     && tar -xzf elasticsearch-${ES_VERSION}.tar.gz \
