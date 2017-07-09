@@ -50,7 +50,7 @@ network.host:
 network.bind_host: _eth0:ipv4_
 network.publish_host: _ec2:privateIp_
 node.master: true
-node.data: true
+node.data: false
 plugin.mandatory:
 - discovery-ec2
 - repository-s3
